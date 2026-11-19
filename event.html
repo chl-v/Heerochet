@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Heerochet | Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lancelot&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+      :root {
+        --bs-orange: #b96841;
+        --bs-beige: #ccbaa2;
+        --bs-eggshell: #e6d9ca;
+        --bs-lime: #746d51;
+        --bs-camo: #414d41;
+        --bs-forest: #1e2e23;
+        --bs-gold: #DCB931;
+      }
+
+      @font-face {
+        font-family: 'Nourd Bold';
+        src: url('assets/fonts/Nourd-Bold.woff2') format('woff2'),
+             url('assets/fonts/Nourd-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      body {
+        font-family: 'Lancelot', serif;
+        background-color: var(--bs-eggshell);
+        color: var(--bs-forest);
+        font-size: 1.15rem;
+      }
+
+      h1, h2, h3, h4, h5, h6, 
+      .masthead-heading, 
+      .section-heading, 
+      .navbar-brand {
+        font-family: 'Nourd Bold', 'Montserrat', sans-serif !important;
+        font-weight: bold;
+        color: var(--bs-forest);
+      }
+
+      .masthead-subheading, 
+      .section-subheading, 
+      .navbar-nav .nav-link, 
+      .btn, 
+      .card-title, 
+      .card-text,
+      .form-control {
+        font-family: 'Montserrat', sans-serif !important;
+      }
+
+      .btn.rounded-pill:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+
+      /* Changed to 100vh to occupy the whole screen height */
+      .masthead {
+        min-height: 100vh !important; 
+      }
+
+      .navbar-custom {
+        background-color: transparent !important;
+        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .navbar-custom.navbar-scrolled {
+        background-color: #1e2e23 !important; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .form-control {
+        padding: 1rem;
+        border-radius: 0.75rem;
+        border: 2px solid transparent;
+      }
+
+      .form-control:focus {
+        border-color: var(--bs-orange);
+        box-shadow: 0 0 0 0.25rem rgba(185, 104, 65, 0.25);
+      }
+
+      textarea.form-control {
+        height: 100%;
+        min-height: 165px;
+      }
+
+      .event-sched-section {
+        background-color: var(--bs-orange);
+      }
+
+      .event-row-pill {
+        background-color: var(--bs-eggshell);
+        border-radius: 50rem;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      }
+
+      .event-date-badge {
+        background-color: var(--bs-forest);
+        color: var(--bs-eggshell);
+        border-radius: 50rem;
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+        font-family: 'Nourd Bold', 'Montserrat', sans-serif !important;
+        font-weight: bold;
+        z-index: 2;
+        min-width: 120px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+
+      .event-name-box {
+        background-color: var(--bs-eggshell);
+        border: 2px solid var(--bs-orange);
+        border-radius: 50rem;
+        padding: 0.85rem 2rem;
+        flex-grow: 1;
+        margin-left: -25px;
+        z-index: 1;
+        font-family: 'Nourd Bold', 'Montserrat', sans-serif !important;
+        color: var(--bs-forest);
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body id="page-top">
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#page-top" style="color: var(--bs-gold);">
+          <img src="assets/img/heerochet.png" alt="HEEROCHET Logo" height="30"/> HEEROCHET
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#page-top">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MASTHEAD -->
+    <header class="masthead position-relative text-white py-5 overflow-hidden d-flex align-items-center">
+      <img src="assets/img/events/Komiket-1.webp" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="z-index: 1; filter: brightness(0.45);" alt="HEEROCHET Banner Background">
+      
+      <div class="container py-5 position-relative" style="z-index: 2;">
+        <h1 class="masthead-heading text-uppercase display-3 fw-bold" style="color: var(--bs-gold);">EXPERIENCE</h1>
+        <p class="masthead-subheading lead my-4 text-white fs-4">Let’s connect in real life! Nothing beats the energy of a live market. We are regularly hitting local conventions, pop-up events, and creators' spaces with exclusive physical drops you won't find anywhere else. Feel the texture, chat slow fashion, and say hi at our next booth!</p>
+        <a class="btn btn-xl text-uppercase fw-bold text-white shadow-sm px-4 py-3" style="background-color: var(--bs-orange); border-color: var(--bs-gold);" href="#sched">See Schedule for Upcoming Events</a>
+      </div>
+    </header>
+
+    <!-- SCHEDULE SECTION -->
+    <section class="event-sched-section py-5" id="sched">
+      <div class="container py-4" style="max-width: 900px;">
+        <h2 class="section-heading text-uppercase mb-5 text-white display-5">SCHEDULE</h2>
+        
+        <div class="d-flex flex-column gap-4">
+          <!-- Row 1 -->
+          <div class="event-row-pill">
+            <div class="event-date-badge">
+              <div style="font-size: 0.85rem; letter-spacing: 1px;">SEPT</div>
+              <div style="font-size: 1.25rem;">19-20</div>
+            </div>
+            <div class="event-name-box ps-5">
+              JUMINO ISLAND 2: PETS & PALS MARKET <br><i>Ayala Malls Vermosa, Cavite</i>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="event-row-pill">
+            <div class="event-date-badge">
+              <div style="font-size: 0.85rem; letter-spacing: 1px;">NOV</div>
+              <div style="font-size: 1.25rem;">13-15</div>
+            </div>
+            <div class="event-name-box ps-5">
+              COSPLAY CAMP: MULTIVERSE BEYOND<br> <i>Festival Mall, Alabang, Muntinlupa</i>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="event-row-pill">
+            <div class="event-date-badge">
+              <div style="font-size: 0.85rem; letter-spacing: 1px;">DEC</div>
+              <div style="font-size: 1.25rem;">28-30</div>
+            </div>
+            <div class="event-name-box ps-5">
+              Cosplay Matsuri 2026<br><i>SMX Convention Center Manila, Pasay</i>
+            </div>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="event-row-pill">
+            <div class="event-date-badge">
+              <div style="font-size: 0.85rem; letter-spacing: 1px;">FEB</div>
+              <div style="font-size: 1.25rem;">12-14</div>
+            </div>
+            <div class="event-name-box ps-5">
+              STICKERCON 2027 - FIELD NOTES: HEARTS IN THE WILD<br><i>Ayala Malls Vermosa, Cavite</i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer py-4 text-white" style="background-color: var(--bs-forest);" id="contact">
+      <div class="container">
+        <div class="row align-items-center text-center text-lg-start">
+          
+          <!-- Left Column: Copyright & Contact Info -->
+          <div class="col-lg-5 mb-3 mb-lg-0">
+            <div class="mb-1">Copyright &copy; HEEROCHET 2026</div>
+            <div class="small">
+              <a class="text-white text-decoration-none me-3" href="mailto:heerochet@example.com">
+                <i class="fas fa-envelope me-1" style="color: var(--bs-gold);"></i> heerochet@example.com
+              </a>
+              <a class="text-white text-decoration-none" href="tel:+639123456789">
+                <i class="fas fa-phone me-1" style="color: var(--bs-gold);"></i> +63 9XX XXX XXXX
+              </a>
+            </div>
+          </div>
+
+          <!-- Center Column: Social Buttons -->
+          <div class="col-lg-3 text-center mb-3 mb-lg-0">
+            <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-instagram"></i></a>
+          </div>
+
+          <!-- Right Column: Legal Links -->
+          <div class="col-lg-4 text-lg-end">
+            <a class="text-white text-decoration-none me-3" href="#!">Privacy Policy</a>
+            <a class="text-white text-decoration-none" href="#!">Terms of Use</a>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <script>
+      window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('mainNav');
+        if (window.scrollY > 40) {
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+        }
+      });
+    </script>
+  </body>
+</html>
